@@ -17,16 +17,23 @@
     <title>Frontend Mentor | Calculator app</title>
   </head>
   <body>
-    <main>
+    
       <header class="header-section section-center">
-        <p class="logo">calc</p>
-        <p class="theme-label">THEME</p>
+        <p>calc</p>
         <div class="theme-container">
-          <p class="themes">1 2 3</p>
-          <div class="selection-knob"></div>
+          <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ol>
+          <label for="slider">THEME</label>
+          <input type="range" min="1" max="3" id="slider" value="1">
         </div>
       </header>
-      <div class="display section-center"></div>
+
+      <main>
+        <div class="display"></div>
+      <div class="section-center">0</div>
       <section class="btn-container section-center">
         <button class="btn btn-7">7</button>
         <button class="btn btn-8">8</button>
@@ -47,7 +54,7 @@
         <button class="btn btn-reset">RESET</button>
         <button class="btn btn-return">=</button>
       </section>
-    </main>
+      </main>
     <script src="./script.js"></script>
   </body>
 </html>
