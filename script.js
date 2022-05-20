@@ -49,6 +49,7 @@ function selectOperator(operator) {
   }
   if (previousOper != "") {
     calculate();
+    updateDisplay();
   }
   operation = operator.toString();
   previousOper = currentOper;
