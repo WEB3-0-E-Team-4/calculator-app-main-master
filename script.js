@@ -21,3 +21,4 @@ const btnDivision = document.querySelector(".btn-division");
 const btnMultiplication = document.querySelector(".btn-multiplication");
 const btnReset = document.querySelector(".btn-reset");
 const btnReturn = document.querySelector(".btn-return");
+

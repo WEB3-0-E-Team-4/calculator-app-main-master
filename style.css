@@ -105,5 +105,94 @@ ol {
     grid-column: 3 / 5;
   }
   
-  .att
-  
+  /* Color palette */
+
+.body-theme-1 {
+  background: #3a4764;
+  color: white;
+}
+
+.body-theme-2 {
+  background: #e6e6e6;
+  color: #35352c;
+}
+
+.body-theme-3 {
+  background: #160628;
+  color: #ffe53d;
+}
+
+.btn-theme-1 {
+background: #eae3dc;
+  color: #444b5a;
+  box-shadow: 0 5px #b4a597;
+}
+
+.btn-theme-2 {
+background: #e5e4e1;
+  color: #35352c;
+  box-shadow: 0 5px #a69d91;
+}
+
+.btn-theme-3 {
+  background: #341c4f;
+  color: #ffe53d;
+  box-shadow: 0 5px #871c9c;
+}
+
+.btn-del-theme-1 {
+  background: #637097;
+  box-shadow: 0 5px #404e72;
+}
+
+.btn-del-theme-2 {
+  background: #377f86;
+  box-shadow: 0 5px #1b5f65;
+}
+
+.btn-del-theme-3 {
+  background: #58077d;
+  box-shadow: 0 5px #bc15f4;
+}
+
+.display-theme-1 {
+  background: #182034;
+}
+
+.display-theme-2 {
+  background: #ededed;
+}
+
+.display-theme-3 {
+  background: #1d0934;
+}
+
+.btn-container-theme-1 {
+  background: #232c43;
+}
+
+.btn-container-theme-2 {
+  background: #d1cccc;
+}
+
+.btn-container-theme-3 {
+  background: #1d0934;
+}
+
+.btn-reset-theme-1 {
+  background: #d03f2f;
+  color: white;
+  box-shadow: 0 5px #93261a;
+}
+
+.btn-reset-theme-2 {
+  background: #ca5502;
+  color: white;
+  box-shadow: 0 5px #893901;
+}
+
+.btn-reset-theme-3 {
+  background: #00e0d1;
+  color: #1b2428;
+  box-shadow: 0 5px #6cf9f2;
+}
