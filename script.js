@@ -2,23 +2,125 @@
 
 //* selecting elements
 
-const display = document.querySelector(".display");
-const btn7 = document.querySelector(".btn-7");
-const btn8 = document.querySelector(".btn-8");
-const btn9 = document.querySelector(".btn-9");
-const btnDel = document.querySelector(".btn-del");
-const btn4 = document.querySelector(".btn-4");
-const btn5 = document.querySelector(".btn-5");
-const btn6 = document.querySelector(".btn-6");
-const btnPlus = document.querySelector(".btn-plus");
-const btn1 = document.querySelector(".btn-1");
-const btn2 = document.querySelector(".btn-2");
-const btn3 = document.querySelector(".btn-3");
-const btnMinus = document.querySelector(".btn-minus");
-const btnDecimalPoint = document.querySelector(".btn-decimal-point");
-const btn0 = document.querySelector(".btn-0");
-const btnDivision = document.querySelector(".btn-division");
-const btnMultiplication = document.querySelector(".btn-multiplication");
-const btnReset = document.querySelector(".btn-reset");
-const btnReturn = document.querySelector(".btn-return");
+const links = document.querySelectorAll("link");
+let slider = document.getElementById("slider");
 
+const display = document.querySelector(".display");
+const btnNumbers = document.querySelectorAll(".btn-number");
+const btnOperators = document.querySelectorAll(".btn-operator");
+
+const btnEqual = document.querySelector(".btn-return");
+const btnReset = document.querySelector(".btn-reset");
+const btnDel = document.querySelector(".btn-del");
+
+// * variables
+
+let currentOper = "";
+let previousOper = "";
+let operation = undefined;
+
+//* helper functions
+
+function themeChange(i) {
+  if (i === "1") {
+    links[2].setAttribute("href", "");
+  } else {
+    links[2].setAttribute("href", `css/theme${i}.css`);
+  }
+}
+
+function updateDisplay() {
+  display.innerHTML = currentOper.toString().slice(0, 10);
+}
+
+function addNumber(num) {
+  if (num === "." && display.innerHTML.includes(".")) {
+    return;
+  }
+  currentOper === "0"
+    ? (currentOper = num)
+    : (currentOper = currentOper.toString() + num.toString());
+  updateDisplay();
+}
+
+function selectOperator(operator) {
+  if (currentOper === "") {
+    return;
+  }
+  if (previousOper != "") {
+    calculate();
+    updateDisplay();
+  }
+  operation = operator.toString();
+  previousOper = currentOper;
+  currentOper = "";
+}
+
+function calculate() {
+  let calculation;
+
+  const previous = parseFloat(previousOper);
+  const current = parseFloat(currentOper);
+
+  if (isNaN(previous) || isNaN(current)) {
+    return;
+  } else if (operation === "+") {
+    calculation = previous + current;
+  } else if (operation === "-") {
+    calculation = previous - current;
+  } else if (operation === "x") {
+    calculation = previous * current;
+  } else if (operation === "/") {
+    calculation = previous / current;
+  } else {
+    return;
+  }
+  calculation === Infinity
+    ? (currentOper = "Error")
+    : (currentOper = calculation);
+  operation = undefined;
+  previousOper = "";
+}
+
+function deleteNum() {
+  currentOper === "Error"
+    ? (currentOper = "")
+    : (currentOper = currentOper.toString().slice(0, -1));
+}
+
+function reset() {
+  currentOper = "";
+  previousOper = "";
+  operation = undefined;
+}
+
+// * event handlers
+
+slider.addEventListener("input", () => {
+  themeChange(slider.value);
+});
+
+btnNumbers.forEach((btnNumber) => {
+  btnNumber.addEventListener("click", () => addNumber(btnNumber.innerHTML));
+});
+
+btnOperators.forEach((btnOperator) => {
+  btnOperator.addEventListener("click", () =>
+    selectOperator(btnOperator.innerHTML)
+  );
+});
+
+btnReset.addEventListener("click", () => {
+  reset();
+  updateDisplay();
+});
+
+btnDel.addEventListener("click", () => {
+  deleteNum();
+  updateDisplay();
+});
+
+btnEqual.addEventListener("click", () => {
+  calculate();
+  updateDisplay();
+});
