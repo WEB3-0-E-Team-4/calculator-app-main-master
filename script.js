@@ -23,7 +23,7 @@ let operation = undefined;
 
 function themeChange(i) {
   if (i === "1") {
-    links[2].setAttribute("href", "");
+    links[2].setAttribute("href", "css/theme2.css");
   } else {
     links[2].setAttribute("href", `css/theme${i}.css`);
   }
