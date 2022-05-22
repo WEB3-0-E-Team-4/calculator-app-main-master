@@ -1,0 +1,52 @@
+ /* Color palette */
+
+ .body-theme-3 {
+     background: #160628;
+     color: #ffe53d;
+ }
+
+ .btn-theme-3 {
+     background: #341c4f;
+     color: #ffe53d;
+     box-shadow: 0 5px #871c9c;
+ }
+
+
+ .btn-del-theme-3 {
+     background: #58077d;
+     box-shadow: 0 5px #bc15f4;
+ }
+
+ .display-theme-3 {
+     background: #1d0934;
+ }
+
+ .btn-container-theme-3 {
+     background: #1d0934;
+ }
+
+ .btn-reset-theme-3 {
+     background: #00e0d1;
+     color: #1b2428;
+     box-shadow: 0 5px #6cf9f2;
+ }
+
+ /* Theme 3 */
+
+ .slider-theme-3::-webkit-slider-runnable-track {
+     background: #1d0934;
+ }
+
+ .slider-theme-3::-webkit-slider-thumb {
+     background: #00e0d1;
+     margin-left: -5px;
+ }
+
+ .slider-theme-3::-moz-range-track {
+     background: #1d0934;
+ }
+
+ .slider-theme-3::-moz-range-thumb {
+     background: #00e0d1;
+     border: 5px solid #1d0934;
+ }

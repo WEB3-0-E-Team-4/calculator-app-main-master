@@ -1,0 +1,49 @@
+   /* Color palette */
+   .body-theme-2 {
+       background: #e6e6e6;
+       color: #35352c;
+   }
+
+   .btn-theme-2 {
+       background: #e5e4e1;
+       color: #35352c;
+       box-shadow: 0 5px #a69d91;
+   }
+
+   .btn-del-theme-2 {
+       background: #377f86;
+       box-shadow: 0 5px #1b5f65;
+   }
+
+   .display-theme-2 {
+       background: #ededed;
+   }
+
+   .btn-container-theme-2 {
+       background: #d1cccc;
+   }
+
+   .btn-reset-theme-2 {
+       background: #ca5502;
+       color: white;
+       box-shadow: 0 5px #893901;
+   }
+
+   /* Slider for Theme 2 */
+
+   .slider-theme-2::-webkit-slider-runnable-track {
+       background: #d1cccc;
+   }
+
+   .slider-theme-2::-webkit-slider-thumb {
+       background: #ca5502;
+   }
+
+   .slider-theme-2::-moz-range-track {
+       background: #d1cccc;
+   }
+
+   .slider-theme-2::-moz-range-thumb {
+       background: #ca5502;
+       border: 0;
+   }

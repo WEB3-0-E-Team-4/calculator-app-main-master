@@ -1,0 +1,40 @@
+input {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 70px;
+    margin: 0;
+  }
+  
+  /* Google Chrome */
+  
+  input::-webkit-slider-runnable-track {
+    cursor: pointer;
+    border-radius: 13px;
+    height: 26px;
+  }
+  
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+  }
+  
+  /* Firefox */
+  
+  input::-moz-range-track {
+    cursor: pointer;
+    border-radius: 13px;
+    height: 26px;
+  }
+  
+  input::-moz-range-thumb {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
+  
+ 
+  
